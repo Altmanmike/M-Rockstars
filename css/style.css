@@ -1,0 +1,498 @@
+/* FONT FACE */
+/* Appelle les polices de la page */
+@font-face {
+    font-family: 'MaskedHeroDemo';
+    src: url('../fonts/MaskedHeroDemo/MaskedHeroDemo.eot');
+    src: url('../fonts/MaskedHeroDemo/MaskedHeroDemo.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MaskedHeroDemo/MaskedHeroDemo.woff2') format('woff2'),
+        url('../fonts/MaskedHeroDemo/MaskedHeroDemo.woff') format('woff'),
+        url('../fonts/MaskedHeroDemo/MaskedHeroDemo.ttf') format('truetype'),
+        url('../fonts/MaskedHeroDemo/MaskedHeroDemo.svg#MaskedHeroDemo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/****************************************/
+/***************** HTML *****************/
+/****************************************/
+
+html, body {
+    font-family: 'Roboto', sans-serif;    
+    /*font-size: 10px;*/
+    /*font-size: 62.5%;*/
+    min-height: 500px;
+    overflow-x: hidden;
+}
+
+html {
+    --scrollbarBG: white;
+    --thumbBG: #00C07A; /* green */   
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 1px;
+    border: 4px solid var(--scrollbarBG);
+}
+
+a, h1, h2, h3, h4, h5, .navbar>.container-fluid {
+    font-family: 'MaskedHeroDemo', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    transition: all 0.3s cubic-bezier(0.69, 0.43, 0.43, 0.65);
+}
+
+a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover {
+    color: white;
+    text-shadow: 2px 2px 5px limegreen;    
+    transition: all 0.3s cubic-bezier(0.69, 0.43, 0.43, 0.65); 
+}
+a, a:hover {
+    text-decoration: none;
+}
+#navbarNav > ul > li > a, footer .btn-night {
+    text-decoration: none;
+    color: black;
+    text-shadow: 2px 2px 5px white;
+    transition: all 0.3s cubic-bezier(0.69, 0.43, 0.43, 0.65);
+}
+
+a.navbar-brand {
+   text-shadow: 2px 2px 5px black; 
+}
+
+ #navbarNav > ul > li > a:hover, footer .btn-night:hover {
+    text-shadow: 2px 2px 5px limegreen;    
+    transition: all 0.3s cubic-bezier(0.69, 0.43, 0.43, 0.65);
+}
+
+#navbarNav > ul > li.nav-item.mx-1 > a {    
+    text-decoration: none; 
+    color: black;
+    text-shadow: 2px 2px 5px white;
+    transition: all 0.3s cubic-bezier(0.69, 0.43, 0.43, 0.65); 
+}
+
+#navbarNav > ul > li.nav-item.mx-1 > a:hover {    
+    text-shadow: 2px 2px 5px limegreen;
+    transition: all 0.3s cubic-bezier(0.69, 0.43, 0.43, 0.65); 
+}
+
+#scrollUp
+{
+    position: fixed;
+    bottom : 10px;
+    right: -100px;
+    opacity: 0.8;
+    z-index: 8;
+}
+
+#scrollUp img {
+    width: 50px;    
+}
+
+/* *********************************************** */
+/* ******************* GRAFIKART ***************** */
+/* *********************************************** */
+
+
+
+[class*="slide-in-fwd-"] {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);    
+}
+
+.slide-in-fwd-visible {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    transition: 1s cubic-bezier(0.45, 0.25, 0.25, 0.95);
+    opacity: 1;   
+}
+
+.slide-in-fwd-center {
+    transition-delay: 0.4s;
+}
+.slide-in-fwd-center-2 {
+    transition-delay: 0.9s;
+}
+.slide-in-fwd-left {
+    transition-delay: 1.3s;
+}
+.slide-in-fwd-right {
+    transition-delay: 1.8s;
+}
+.slide-in-fwd-top {
+    transition-delay: 2.05s;
+} 
+.slide-in-fwd-bottom {
+    transition-delay: 2.55s;
+}
+
+/*
+.slide-in-fwd-1 {
+    transition-delay: 1s;
+}
+.slide-in-fwd-2 {
+    transition-delay: 2s;
+}
+.slide-in-fwd-3 {
+    transition-delay: 3s;
+}
+.slide-in-fwd-4 {
+    transition-delay: 4s;
+}
+.slide-in-fwd-5 {
+    transition-delay: 5s;
+}*/
+
+
+/* *********************************************** */
+/* ******************** ANIMISTA ***************** */
+/* *********************************************** */
+
+
+/* Class & Animation slide-in-fwd-top */
+
+.slide-in-fwd-title {
+    -webkit-animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes slide-in-fwd-title {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateY(-800px);
+            transform: translateZ(-1400px) translateY(-800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-fwd-title {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateY(-800px);
+            transform: translateZ(-1400px) translateY(-800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/****************************************/
+/**************** HEADER ****************/
+/****************************************/
+
+nav {
+    background: hsla(0, 0%, 0%, 1);
+    background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(158, 100%, 38%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(158, 100%, 38%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(158, 100%, 38%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#00C07A", GradientType=1 );
+}
+
+/* HEADER ET SECTION */
+
+#header-page {
+    /*height: 600px;*/
+    background-color: white;
+}
+/*
+svg.inverse{
+   transform:scaleY(-1);
+}*/
+
+
+
+/****************************************/
+/************** index page **************/
+/****************************************/
+
+
+/* SECTION PRESENT */
+
+#present {
+    background: hsla(0, 0%, 0%, 1);
+    background: linear-gradient(315deg, hsla(0, 0%, 0%, 0.1) 0%, hsla(0, 0%, 34%, 1) 100%);
+    background: -moz-linear-gradient(315deg, hsla(0, 0%, 0%, 0.1) 0%, hsla(0, 0%, 34%, 1) 100%);
+    background: -webkit-linear-gradient(315deg, hsla(0, 0%, 0%, 0.1) 0%, hsla(0, 0%, 34%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#565656", GradientType=1 );   
+}
+
+#present div.albumcover img {
+    max-width: 100%;
+    height: auto;
+}
+
+#present div.bandpic img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* SECTION NEW-CLIP */
+
+section#new-clip {
+    background: hsla(158, 100%, 38%, 1);
+    background: radial-gradient(circle, hsla(158, 100%, 38%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(158, 100%, 38%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+    background: -webkit-radial-gradient(circle, hsla(158, 100%, 38%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00C07A", endColorstr="#000000", GradientType=1 );
+}
+
+
+/* SECTION BEST-BANDS */
+
+section#best-bands { 
+
+}
+
+section#best-bands .nofont { 
+    font-family: 'Roboto', sans-serif;   
+}
+
+/* SECTION BRANDS */
+
+section#brands {
+
+}
+
+
+/* SECTION STYLES */
+
+section#styles {
+    background: hsla(0, 0%, 0%, 1);
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.1) 0%, hsla(0, 0%, 34%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(0, 0%, 0%, 0.1) 0%, hsla(0, 0%, 34%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(0, 0%, 0%, 0.1) 0%, hsla(0, 0%, 34%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#565656", GradientType=1 );
+}
+
+section#styles div.row {
+    --bs-gutter-x: 0;
+}
+
+
+/****************************************/
+/************** medias page *************/
+/****************************************/
+
+
+/* SECTION NEW-CLIP */
+
+section#new-clip iframe {
+    width: 350px;
+    height: 200px; 
+}
+
+/* SECTION MEDIAS */
+
+section#medias-disto iframe, section#medias-drum iframe {
+    width: 350px;
+    height: 200px; 
+}
+
+
+/****************************************/
+/************** liens page **************/
+/****************************************/
+
+/* SECTION LINKS-LIST */
+
+section#links-festivals {
+    background-color: #004b30ba;
+    border-radius: 10px;
+}
+
+
+/****************************************/
+/*************** tour page **************/
+/****************************************/
+
+/* SECTION LINKS-LIST */
+
+section#table {
+    background-color: #004b30ba;
+    border-radius: 10px;
+}
+
+section#table table tr {
+    background-color: white;
+}
+
+/****************************************/
+/**************** FOOTER ****************/
+/****************************************/
+
+footer {
+    background: hsla(0, 0%, 0%, 1);
+    background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 15%, hsla(158, 100%, 38%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 0%, 1) 15%, hsla(158, 100%, 38%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 0%, 1) 15%, hsla(158, 100%, 38%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#00C07A", GradientType=1 );
+}
+
+
+footer svg {
+    vertical-align: top;
+}
+
+
+/* ---------------------------------------------------------- */
+/* ---------------------- TAB VERSION ----------------------- */
+/* ---------------------------------------------------------- */
+
+@media only screen and (min-width: 568px) {
+    
+    html, body {        
+        font-size: 1.0rem;
+    } 
+  /*
+    #header-page {
+        height: 250px;
+    }*/
+    
+    /* SECTION PRESENT */
+    
+    /* SECTION NEW-CLIP */
+    
+    section#new-clip iframe {
+        width: 450px;
+        height: 300px; 
+    }
+    
+    /* PAGE MEDIAS */
+    
+    section#medias-disto iframe, section#medias-drum iframe {
+        width: 450px;
+        height: 300px; 
+    }  
+}
+
+
+/* ---------------------------------------------------------- */
+/* --------------------- TAB 2 VERSION ---------------------- */
+/* ---------------------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+    /*
+    #header-page {
+        height: 300px;
+    }   */ 
+   
+    /* SECTION PRESENT */
+
+    
+        
+    /* SECTION NEW-CLIP */
+    
+    section#new-clip iframe {
+        width: 550px;
+        height: 350px; 
+    }
+    
+    /* PAGE MEDIAS */
+    
+    section#medias-disto iframe, section#medias-drum iframe {
+        width: 550px;
+        height: 350px; 
+    }  
+
+    
+}
+
+/* ---------------------------------------------------------- */
+/* -------------------- Mini PC VERSION --------------------- */
+/* ---------------------------------------------------------- */
+
+@media only screen and (min-width: 992px) {
+    /*
+    #header-page {
+        height: 350px;
+    }*/
+    
+    /* SECTION PRESENT */
+        
+     section#present div.cd-cover {    
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+    } 
+    
+    section#present div.bandpic div.promo {
+        text-align: justify;
+    }
+    
+    /* SECTION NEW-CLIP */
+    
+    section#new-clip iframe {
+        width: 650px;
+        height: 450px; 
+    }
+    
+    /* PAGE MEDIAS */
+    
+    section#medias-disto iframe, section#medias-drum iframe {
+        width: 650px;
+        height: 450px; 
+    }   
+
+}
+
+/* ---------------------------------------------------------- */
+/* ---------------------- PC VERSION ----------------------- */
+/* ---------------------------------------------------------- */
+
+@media only screen and (min-width: 1200px) {
+    
+    html, body {        
+        font-size: 1.1rem;
+    }
+    
+    /* SECTION PRESENT */
+    
+    #present div.albumcover img {
+        width: 750px;
+        
+    }
+    
+    /* SECTION NEW-CLIP */
+    
+    section#new-clip iframe {
+        width: 750px;
+        height: 550px; 
+    }
+    
+    /* PAGE MEDIAS */
+    
+    section#medias-disto iframe, section#medias-drum iframe {
+        width: 750px;
+        height: 550px; 
+    }
+    
+}
